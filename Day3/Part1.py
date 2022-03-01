@@ -11,13 +11,11 @@ if __name__ == "__main__":
                 else:
                     occurrence_list[i] += 1
         gamma_rate = ''
-        mask = ''
         for occurrence in occurrence_list:
             if occurrence >= 0:
                 gamma_rate += '1'
             else:
                 gamma_rate += '0'
-            mask += '1'
         epsilon_rate = ''.join('1' if c == '0' else '0' for c in gamma_rate)
         gamma_rate = int(gamma_rate, 2)
         epsilon_rate = int(epsilon_rate, 2)
